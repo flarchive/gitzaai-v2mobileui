@@ -1,0 +1,76 @@
+{
+    "name": "gitzaai/v2mobileui",
+    "description": "Adds a configurable bottom tab bar for Flarum on mobile.",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/android-com-pl/mobile-tab/issues",
+        "source": "https://github.com/android-com-pl/mobile-tab",
+        "forum": "https://discuss.flarum.org/d/28216-mobile-tab"
+    },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/android-com-pl/mobile-tab?sponsor=1"
+        }
+    ],
+    "require": {
+        "flarum/core": "^2.0.0-beta.7",
+        "php": "^8.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Acpl\\MobileTab\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Rafał Całka",
+            "homepage": "https://github.com/rafaucau",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "beta",
+    "prefer-stable": true,
+    "scripts": {
+        "analyse:phpstan": "phpstan analyse",
+        "clear-cache:phpstan": "phpstan clear-result-cache"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "V2 Mobile UI",
+            "category": "theme",
+            "icon": {
+                "name": "fas fa-mobile-screen",
+                "backgroundColor": "#00dc51",
+                "color": "#15161E"
+            }
+        },
+        "optional-dependencies": [
+            "flarum/tags"
+        ],
+        "flarum-cli": {
+            "modules": {
+                "admin": false,
+                "forum": true,
+                "js": true,
+                "jsCommon": false,
+                "gitConf": true,
+                "githubActions": true,
+                "prettier": true,
+                "typescript": false,
+                "bundlewatch": false,
+                "backendTesting": false,
+                "editorConfig": true,
+                "styleci": true,
+                "css": true
+            }
+        }
+    },
+    "require-dev": {
+        "flarum/phpstan": "^2.0@beta"
+    }
+}

@@ -1,0 +1,38 @@
+acpl-mobile-tab:
+  admin:
+    available_items: "可用項目"
+    active_items: "已啟用項目"
+    create_new_item_button: "建立新項目"
+    edit_item:
+      modal_title: "編輯項目"
+      label: "標籤"
+      label_placeholder: "我的自訂項目"
+      path: "路徑"
+      url: "網址"
+      icon: "圖示"
+      icon_help: "輸入任意 <a>FontAwesome</a> 圖示類別名稱，包括 <code>fas fa-</code> 前綴。"
+      is_internal_checkbox: "這是站內連結嗎？"
+      open_new_tab_checkbox: "在新分頁開啟連結"
+      submit_button: "儲存"
+      delete_button: "刪除"
+      delete_item_confirmation: "確定要刪除此項目嗎？"
+    scroll_settings:
+      toggle_label: "捲動時切換可見性"
+      threshold_label: "捲動閾值（px）"
+      threshold_help: "從目前位置捲動多少距離後切換可見性。"
+  forum:
+
+  lib:
+    item:
+      home: "首頁"
+      all_discussions: "討論"
+      categories: "分類"
+      notifications: "通知"
+      session: "帳號"
+      search: "搜尋"
+      log_in: "登入"
+      profile: "個人資料"
+      tags: "標籤"
+      post: "發布"
+      messages: "私訊"
+      fof-byobu: "私密"

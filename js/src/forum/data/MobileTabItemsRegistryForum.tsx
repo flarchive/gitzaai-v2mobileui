@@ -1,0 +1,45 @@
+import app from 'flarum/forum/app';
+import MobileTabItemsRegistry from '../../common/MobileTabItemsRegistry';
+import ForumMobileTabSessionItem from '../components/ForumMobileTabSessionItem';
+import ForumNewDiscussionTabItem from '../components/ForumNewDiscussionTabItem';
+import ForumNotificationsTabItem from '../components/ForumNotificationsTabItem';
+import ForumSearchTabItem from '../components/ForumSearchTabItem';
+
+/**
+ * Extends the base `MobileTabItemsRegistry` to safely add forum-specific logic.
+ *
+ * Its primary purpose is to assign `forumComponent` handlers or add new items
+ * that depend on components imported from the `flarum/forum` application (e.g. `SessionDropdown`).
+ *
+ * These forum-specific imports cannot be placed in `common/MobileTabItemsRegistry`
+ * because that file is also loaded by the admin panel,
+ * which would cause a crash as the imports are not available in the admin context.
+ */
+export default class MobileTabItemsRegistryForum extends MobileTabItemsRegistry {
+  items() {
+    const items = super.items();
+
+    items.setContent('notifications', {
+      ...items.get('notifications'),
+      forumComponent: ForumNotificationsTabItem,
+    });
+
+    items.setContent('session', {
+      ...items.get('session'),
+      forumComponent: ForumMobileTabSessionItem,
+    });
+
+    items.setContent('search', {
+      ...items.get('search'),
+      forumComponent: ForumSearchTabItem,
+    });
+
+    items.setContent('new_discussion', {
+      ...items.get('new_discussion'),
+      canView: () => !!app.session.user && !!app.forum.attribute<boolean>('canStartDiscussion'),
+      forumComponent: ForumNewDiscussionTabItem,
+    });
+
+    return items;
+  }
+}
