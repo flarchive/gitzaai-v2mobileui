@@ -2,13 +2,13 @@
 
 > **Read-only archive of released versions of gitzaai/v2mobileui.** Not for installation: use [Packagist](https://packagist.org/packages/gitzaai/v2mobileui) or the [upstream repository](https://github.com/gitzaai/v2mobileui).
 
-**0** versions archived · Latest: [`v2.0.0`](https://github.com/flarchive/gitzaai-v2mobileui/tree/archive/v2.0.0) · License: `MIT` · Flarum: `^2.0.0-beta.7`
+**1** versions archived · Latest: [`v2.0.0`](https://github.com/flarchive/gitzaai-v2mobileui/tree/archive/v2.0.0) · License: `MIT` · Flarum: `^2.0.0-beta.7`
 
 ## Archived Versions
 
 | Version | Released | Flarum | Source |
 |---|---|---|---|
-| — | — | — | — |
+| `v2.0.0` | 2026-05-04 | `^2.0.0-beta.7` | [Browse](https://github.com/flarchive/gitzaai-v2mobileui/tree/archive/v2.0.0) |
 
 Catalog entry: [packages/gitzaai-v2mobileui.json](https://github.com/flarchive/archive-index/blob/main/packages/gitzaai-v2mobileui.json)
 
